@@ -1,13 +1,5 @@
 "use strict"
 
-// Crea un programa on l’usuari/ària introdueixi una temperatura
-//  en °C i es mostri per pantalla la conversió en ° Fahrenheit.
-
-// K = 32;
-
-// Fórmula
-// (0 °C × 9 / 5) + K = 32 °F
-
 function print(message, elemtentHTML){
     elemtentHTML.innerHTML = message
 }
