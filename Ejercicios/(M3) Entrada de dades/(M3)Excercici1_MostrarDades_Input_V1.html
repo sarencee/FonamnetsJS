@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="userInfo"></p>
+    <input type = "text" id ="inputNom" placeholder = "Introdueix el teu nom"><br>
+    <input type="text" id = "inputCognoms" placeholder="Introdueix els teus cognoms"><br>
+    <input type="number" id="inputEdat" placeholder="Introdueix la teva edat"><br>
+    <input type="button" id="mostrarDatos" onclick="mostrarDatos()" value="Enviar">
+
+    <script>
+        
+        function mostrarDatos(){
+            let nom = document.getElementById("inputNom").value;
+            let cognom = document.getElementById("inputCognoms").value;
+            let edat = document.getElementById("inputEdat").value;
+            let missatge = `Nom i cognoms: ${nom} ${cognom}, edat: ${edat}`;
+
+            document.getElementById("userInfo").innerHTML = missatge;
+        }
+
+
+
+    </script>
+</body>
+</html>

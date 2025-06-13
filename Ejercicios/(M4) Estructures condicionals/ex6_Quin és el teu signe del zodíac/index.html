@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form>
+        <label for="month">Selecciona el teu mes de naixement</label>
+        <select id="month">
+            <option value="0" selected disabled>Choose one</option>
+            <option value="1">Gener</option>
+            <option value="2">Febrer</option>
+            <option value="3">Març</option>
+            <option value="4">Abril</option>
+            <option value="5">Maig</option>
+            <option value="6">Juny</option>
+            <option value="7">Juliol</option>
+            <option value="8">Agost</option>
+            <option value="9">Setembre</option>
+            <option value="10">Octubre</option>
+            <option value="11">Novembre</option>
+            <option value="12">Desembre</option>
+        </select>
+        <br>
+        <label for="day">Selecciona el teu dia de naixement</label>
+        <input type="number" id="day" placeholder="31">
+        <br>
+        <input type="button" onclick="calcula()" value="Calcular">
+    </form>
+    <div id="result"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>

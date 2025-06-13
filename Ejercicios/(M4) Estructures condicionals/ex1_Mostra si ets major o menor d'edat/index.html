@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+   
+    <input type = "text" id ="inputNom" placeholder = "Introdueix el teu nom"><br>
+    <input type="text" id = "inputCognoms" placeholder="Introdueix els teus cognoms"><br>
+    <input type="number" id="inputEdat" placeholder="Introdueix la teva edat"><br>
+    <input type="button" id="mostrarDatos" onclick="mostrarDatos()" value="Enviar">
+    <div id="userInfo"></div>
+
+    
+    <script>
+
+        function mostrarDatos(){
+
+            let nom = document.getElementById("inputNom").value;
+            let cognom = document.getElementById("inputCognoms").value;
+            let edat = parseInt(document.getElementById("inputEdat")).value;
+            let missatgeMenor = `${nom} ${cognom}, ets menor d'edat`;
+            let missatgeMajor = `${nom} ${cognom}, ets major d'edat`;
+
+            console.log(edat)
+
+            if (edat >=0 && edat < 18){
+                document.getElementById("userInfo").innerHTML = missatgeMenor;
+            } else if (edat >= 18){
+                document.getElementById("userInfo").innerHTML = missatgeMajor;
+            }
+            
+         }
+
+
+
+    </script>
+</body>
+</html>

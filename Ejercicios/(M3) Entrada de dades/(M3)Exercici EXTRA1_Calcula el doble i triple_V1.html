@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Introdueix un nombre per saber-ne el doble i el triple</h1>
+    <input type="number" id="num" placeholder="Escriu un nombre">
+    <input type="button" onclick="calcular()" value="Calcular">
+    <p id="resultat"></p>
+
+    <script>
+
+        function calcular(){
+
+            let num = Number(document.getElementById("num").value);
+            let doble = num*2;
+            let triple = num*3;
+            let missatge = `El doble de ${num} és ${doble} i el triple és ${triple}.`;
+
+            document.getElementById("resultat").innerHTML = missatge;
+        }
+
+    </script>
+</body>
+</html>

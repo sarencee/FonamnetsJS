@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form>
+        <label for="inputNum1">Primer número</label>
+        <input type="number" id="inputNum1" placeholder="ex: 1">
+        <label for="inputNum2">Segón número</label>
+        <input type="number" id="inputNum2" placeholder="ex: 2">
+        <br>
+        <br>
+        <label for="suma">Suma</label>
+        <input type="radio" id="suma" name="operacio" value="1">
+        <label for="resta">Resta</label>
+        <input type="radio" id="resta" name="operacio" value="2">
+        <label for="multiplicacio">Multiplicació</label>
+        <input type="radio" id="multiplicacio" name="operacio" value="3">
+        <label for="divisio">Divisió</label>
+        <input type="radio" id="divisio" name="operacio" value="4">
+        <br>
+        <br>
+        <input type="button" id="operar" onclick= "operate()" value="Operar">
+        <br>
+    </form>
+    <br>
+     <div id="result"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>

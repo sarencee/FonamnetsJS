@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Calculador de litres de pintura</h2>
+    <h3>Introdueix l'alçada, amplada i nombre de mans per saber quants litres necessites:</h3>
+    <input type="number" id="alt" placeholder="Alçada">
+    <input type="number" id="ample" placeholder="Amplada">
+    <input type="number" id="mans" placeholder="Mans">
+    <input type="button" onclick="calcular()" value="Calcular">
+    <p id="resultat"></p>
+
+    <script>
+
+        function calcular(){
+
+        const coberturaALitros = 12;
+
+        let alt = Number(document.getElementById("alt").value);
+        let ample = Number(document.getElementById("ample").value);
+        let mans = Number(document.getElementById("mans").value);
+
+        let area = ample*alt;
+        let superficie = area*mans.toFixed(2);
+
+        let litresNecessaris = superficie/coberturaALitros.toFixed(2);
+
+        let missatge = `Els litres necesaris per cobrir un àrea de ${area}m2 en ${mans} ma/ns és: ${litresNecessaris} L.`;
+
+        document.getElementById("resultat").innerHTML = missatge;
+
+        }
+        
+
+
+    </script>
+</body>
+</html>
