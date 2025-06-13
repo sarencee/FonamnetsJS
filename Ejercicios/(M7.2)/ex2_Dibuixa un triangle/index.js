@@ -8,14 +8,13 @@ function main(){
 
     const resultDiv = document.getElementById("result")
     const num = parseInt(document.getElementById("num").value)
-
+    const asterisc = "*"
     let message = ""
 
-    for (let i = 0; i < num; i++){
-      
-        message += "*<br>"   
-        resultDiv.innerHTML += `${message}<br>`
+    for (let i = 1; i <= num; i++){
+        let numeroChar = i
+        message += `${asterisc}<br>`
     }
-
-    // print(message, resultDiv)
+    
+    print(message, resultDiv)
 }
