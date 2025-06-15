@@ -1,12 +1,5 @@
 "use strict"
 
-// Realitzar un programa on l’usuari/ària introdueix un
-//  número i el programa crida a un mètode que retorna el 
-// factorial del número introduït.
-
-// El factorial d'un nombre n (enter, no negatiu) 
-// és el producte de tots els nombres enters positius inferiors o iguals a n.
-
 function print(message, elementHTML){
 elementHTML.innerHTML = message
 }
