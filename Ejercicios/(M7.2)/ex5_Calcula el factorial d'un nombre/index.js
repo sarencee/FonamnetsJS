@@ -7,7 +7,9 @@
 // El factorial d'un nombre n (enter, no negatiu) 
 // és el producte de tots els nombres enters positius inferiors o iguals a n.
 
-//TODO validacions, netejar codi, posar message
+function print(message, elementHTML){
+elementHTML.innerHTML = message
+}
 
 function factorial(n){
     let result = 1
@@ -22,9 +24,19 @@ function main(){
     const resultDiv = document.getElementById("result")
     const num = parseInt(document.getElementById("num").value)
 
-    const arrNum = []
-    let resultat = factorial(num)
+    const err1 = "Introdueix un número."
+    const err2 = "Introdueix un major que 0."
 
-    resultDiv.innerHTML = factorial(num)
+    if (isNaN(num)) return print(err1, resultDiv)
+    if (num <= 0) return print(err2, resultDiv)
+
+
+
+    let resultFactorial = factorial(num)
+    let message = `El factorial de ${num} és ${resultFactorial}.`
+
+
+
+    print(message,resultDiv)
 
 }
