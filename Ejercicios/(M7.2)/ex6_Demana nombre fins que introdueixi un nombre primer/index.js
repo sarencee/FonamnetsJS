@@ -1,21 +1,5 @@
 "use strict"
 
-// L’usuari/ària ha d’introduir números fins que
-//  introdueixi un nombre primer. 
-
-// En el moment que l’usuari/ària introdueixi un 
-// nombre primer, el programa ha de treure per pantalla 
-// el següent missatge: “Exacte, el número “x” és primer!”
-
-// function () {
-//     var p = false;
-//     var n = prompt("Escoge un número: ");
-//     if (n > 1) {
-//         p = ep(n);
-//     }
-//     alert(p);
-// }
-
 
 function esPrimer(num) {
     let esPrimer = true;
