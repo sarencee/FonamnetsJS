@@ -7,25 +7,24 @@
 // nombre primer, el programa ha de treure per pantalla 
 // el següent missatge: “Exacte, el número “x” és primer!”
 
-
-function iniciarComprovacio() {
-    var esPrimer = false;
-    var num = prompt("Escoge un número: ");
-    if (num > 1) {
-        esPrimer = ep(num);
-    }
-    return esPrimer
-}
+// function () {
+//     var p = false;
+//     var n = prompt("Escoge un número: ");
+//     if (n > 1) {
+//         p = ep(n);
+//     }
+//     alert(p);
+// }
 
 
 function esPrimer(num) {
     let esPrimer = true;
-    let divisor = 2;
-    while (esPrimer && divisor < num) {
-        if (num % divisor == 0) {
+    let i = 2;
+    while (esPrimer && i < num) {
+        if (num % i == 0) {
             esPrimer = false;
         }
-        divisor++;
+        i++;
     }
     return esPrimer;
 }
@@ -33,12 +32,20 @@ function esPrimer(num) {
 function main(){
 
     const resultDiv = document.getElementById("result")
-    const userNum = prompt("Introdueix un número").value
-  
-    do{
-        iniciarComprovacio(userNum)
-        
-    } while (!iniciarComprovacio)
+    let primerCheck = false;
 
+    
+    let num = 0
+    
+    do {
+        num = parseInt(prompt("Introdueix un número primer:"))
         
+        if (num > 1) {
+            primerCheck = esPrimer(num)
+        } else primerCheck = false
+    } while (!primerCheck)
+        
+    let message = `Exacte, el número ${num} és primer!`
+
+    resultDiv.innerHTML = message
 }
