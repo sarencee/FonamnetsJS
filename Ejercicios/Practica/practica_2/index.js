@@ -17,7 +17,7 @@ function triangle(num){
     
     let message = ""
 
-    for (let i = num; i > 0; i--){ //i = 4
+    for (let i = num; i > 0; i--){
         for (let j = i; j > 0; j--){
             message += "*"
         }
