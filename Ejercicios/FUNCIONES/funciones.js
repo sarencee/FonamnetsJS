@@ -8,7 +8,7 @@ const validate = value => !value
 function catchValues(){
 
    return{
-    num : parseInt(document.getElementById("num").value),   
+    num : document.getElementById("num").value,   
     resultDiv : document.getElementById("result")
    } 
 
