@@ -7,12 +7,12 @@
 </head>
 <body>
     
-    <h1>Calcular àrea de figures geomètriques</h1>
+    <h2>Calcular àrea de figures geomètriques</h2>
     <br>
-    <h2>1. Quadrat</h2><h3>(costat * costat)</h3>
-    <h2>2. Triangle</h2><h3>(base * altura / 2)</h3>
-    <h2>3. Rectangle</h2><h3>(base * altura)</h3>
-    <h2>4. Cercle</h2><h3>(Math.PI * radio**2)</h3>
+    <h3>1. Quadrat</h3><h3>(costat * costat)</h3>
+    <h3>2. Triangle</h3><h3>(base * altura / 2)</h3>
+    <h3>3. Rectangle</h3><h3>(base * altura)</h3>
+    <h3>4. Cercle</h3><h3>(Math.PI * radio**2)</h3>
 
     <select id="choice">
         <option value="0" selected disabled>Selecciona una opcio</option>
@@ -22,8 +22,14 @@
         <option value="4">Cercle</option>
     </select>
 
-    
     <input type="button" onclick="main()" value="Calcular">
+
+    <div id="inputDivQuadrat">
+
+        <label for="costatQuadrat">Introdueix la mesura d'un costat</label>
+        <input type="number" id="costatQuadrat" placeholder="ex: 2">
+
+    </div>
 
     <div id="result"></div>
 

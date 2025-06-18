@@ -1,27 +1,23 @@
 "use strict"
 
-/*
-HTML:
-    titol
-    mostra de operacions
-    select operacio
-    mostar result
-JS
-    catch input sleccionat
-    make funcio per cada tipus de seleccio
-    make main funcio per que cridi les altres
-    fer un switch per cada cas
-    validar
-    mostar resultat
-*/
-
 const print = (message, elementHTML) => elementHTML.innerHTML = message
 
-
+function showDiv(HTMLDiv) {
+  if (HTMLDiv.style.display === "none") {
+    HTMLDiv.style.display = "block";
+  } else {
+    HTMLDiv.style.display = "none";
+  }
+}
 
 function areaQuadrat(){
 
-    let costat = parseFloat(prompt("Introdueix la mesura d'un costat:")).toFixed(2)
+    const inputDivQuadrat = document.getElementById("inputDivQuadrat")
+
+    showDiv(inputDivQuadrat)
+    
+    let costat = parseFloat(document.getElementById("costatQuadrat").value).toFixed(2)
+    // let costat = parseFloat(prompt("Introdueix la mesura d'un costat:")).toFixed(2)
 
     return (costat * costat).toFixed(2)
 }
@@ -42,35 +38,29 @@ function areaRectangle(){
 }
 
 function areaCercle(){
-    
+
     let radio = parseFloat(prompt("Introdueix el radio:")).toFixed(2)
 
     return (Math.PI * radio**2).toFixed(2)
 }
-
-
-
-
 
 function main(){
 
     const resultDiv = document.getElementById("result")
     const userChoice = parseInt(document.getElementById("choice").value)
 
-    console.log(userChoice)
     let message = "El resultat és: "
-    // let areaQuadrat = areaQuadrat()
     
     const err1 = ""
 
     switch (userChoice){
         case 1: print(message += areaQuadrat(), resultDiv)
         break
-        case 2: print(areaTriangle(), resultDiv)
+        case 2: print(message += areaTriangle(), resultDiv)
         break
-        case 3: print(areaRectangle(), resultDiv)
+        case 3: print(message += areaRectangle(), resultDiv)
         break
-        case 4: print(areaCercle(), resultDiv)
+        case 4: print(message += areaCercle(), resultDiv)
         break
     }
 

@@ -1,0 +1,15 @@
+"use strict"
+
+
+const print = (message, elementHTML) => elementHTML.innerHTML = message
+
+const validate = value => !value
+
+function catchValues(){
+
+   return{
+    num : parseInt(document.getElementById("num").value),   
+    resultDiv : document.getElementById("result")
+   } 
+
+}
