@@ -9,7 +9,15 @@ function catchValues(){
 
    return{
     num : document.getElementById("num").value,   
-    resultDiv : document.getElementById("result")
+    resultDiv : document.getElementById("result"),
    } 
 
+}
+
+function literals(){
+
+    return{
+        message : "",
+        err1 : "Introdueix un text.",
+    }
 }

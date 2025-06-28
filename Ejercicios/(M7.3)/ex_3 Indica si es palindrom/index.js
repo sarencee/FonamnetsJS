@@ -1,21 +1,5 @@
 "use strict"
 
-// L’usuari/ària ha d’introduir una frase i 
-// el programa ha de dir si la frase és un palíndrom.
-
-/* TODO
-HTML
-    input
-    button
-    result
-JS
-    main
-    reverse function
-     cathc sritng reverse string compare string to original string
-    cathc values
-    validate
-*/
-
 const print = (message, elementHTML) => elementHTML.innerHTML = message
 
 const validate = value => !value
@@ -27,6 +11,15 @@ function catchValues(){
     resultDiv : document.getElementById("result")
    } 
 
+}
+
+function literals(){
+
+    return{
+        mess1 : "",
+        mess2 : "",
+        err1 : "Introdueix un text.",
+    }
 }
 
 function reverseArray(array){
@@ -52,14 +45,6 @@ function compareArray(arr1, arr2){
 
 }
 
-function literals(){
-
-    return{
-        mess1 : "",
-        mess2 : "",
-        err1 : "Introdueix un text.",
-    }
-}
 
 function comprovarPalindrom(){
 
