@@ -1,17 +1,5 @@
 "use strict"
 
-// L’usuari/ària ha d’introduir un DNI i el programa ha de dir si la lletra
-//  és correcte o no amb el nombre de DNI. 
-// Si la lletra no és correcta, ha de dir quina lletra és la correcta.
-
-// Per calcular la lletra DNI has de prendre el número de
-//  DNI a verificar i dividir-lo entre 23. 
-// La resta es reemplaça per una lletra que ja està assignada a aquest nombre 
-// mitjançant la taula adjunta: 
-
-// RESTO 01 23456789 10 11 12 13 14 15 16 17 18 19 20 21 22
-// LETRA TRWAGMYFPDX B N J Z SQVH L C
-
 const print = (message, elementHTML) => elementHTML.innerHTML = message
 
 function catchValues(){
