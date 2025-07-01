@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <section id="create">
+        <label for="name">Hotel Name:</label>
+        <input type="text" id="name" placeholder="Hotel Dusk">
+        <br>
+        <label for="nRooms">Hotel rooms:</label>
+        <input type="text" id="nRooms" placeholder="215">
+        <br>
+        <label for="nFloors">Hotel floors:</label>
+        <input type="number" id="nFloors" placeholder="2">
+        <br>
+        <label for="hotelArea">Hotel area:</label>
+        <input type="number" id="hotelArea" placeholder="500 m2">
+        <br>
+    </section>
+    <input type="button" onclick="crearHotel()" value="Crear hotel">
+    <input type="button" onclick="veureHotel()" value="Veure hotel">
+    <input type="button" onclick="donarDeBaixaHotel()" value="Eliminar hotel">
+
+    <div id="result"></div>
+
+    <script src="DDBB.js"></script>
+    <script src="Hotel.js"></script>
+    <script src="helpers.js"></script>
+    <script src="Faker.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

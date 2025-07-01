@@ -1,10 +1,5 @@
 "use strict"
 
-// Omple un array amb 20 números random entre l'1 i el 50.
-
-// Quan estigui ple, mostra la suma de tots els seus 
-// nombres parells i la suma de tots els seus números imparells.
-
 const print = (mess, elementHTML) => elementHTML.innerHTML = mess
 
 function catchValues(){
