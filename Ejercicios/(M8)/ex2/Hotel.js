@@ -6,7 +6,7 @@ class Hotel{
     #nRooms
     #nFloors
     #hotelArea
-    #cost = 0
+    // #cost
 
     static roomPerWorker = 20
 
@@ -21,7 +21,7 @@ class Hotel{
     get nRooms () {return this.#nRooms}
     get nFloors () {return this.#nFloors}
     get hotelArea () {return this.#hotelArea}
-    get cost () {return this.#cost}
+    get cost () {return this.calcularManteniment()} //THIS is fine??
 
     set name (newValue) {this.#name = newValue}
     set nRooms (newValue) {this.#nRooms = newValue}
@@ -30,10 +30,12 @@ class Hotel{
 
     calcularManteniment(){
        
+        let cost = 0
         let workers =  Math.ceil (this.#nRooms / Hotel.roomPerWorker)
-        this.#cost = workers * 1500
+        cost = workers * 1500
 
-        return this.#cost
+        return cost
+
     }
 
     toString(){
@@ -41,8 +43,8 @@ class Hotel{
         Hotel name: ${this.#name}
         Number of rooms: ${this.#nRooms}
         Number of floors: ${this.#nFloors}
-        Hotel area: ${this.#hotelArea}
-        Hotel costs: ${this.calcularManteniment()}€
+        Hotel area: ${this.#hotelArea}m2
+        Hotel costs: ${this.cost}€ 
         `
     }
 }

@@ -62,10 +62,14 @@ function findPosition(name){
 function crearHotel(){
 
     const {name, nRooms, nFloors, hotelArea, resultDiv} = catchValues()
-    const {message, err1, mCreated} = literals() 
+    const {message, err1, err2, err3, mCreated} = literals() 
     console.log(name, nRooms, nFloors, hotelArea, resultDiv)
 
-    //IF VALIDATE OK
+    if (validate(nRooms) || validate(nFloors) || validate(hotelArea)|| validate(name)) return print(err3, resultDiv)
+
+    if (valNum(nRooms) || valNum(nFloors) || valNum(hotelArea)) return print(err2, resultDiv)
+    if (valString(name)) return print(err1, resultDiv)
+
     const hotel = new Hotel(name, nRooms, nFloors, hotelArea)
     console.log(hotel)
     hotels.push(hotel)
@@ -91,7 +95,9 @@ function donarDeBaixaHotel(){
 
 function veureHotel(){
     const {name, resultDiv} = catchValues()
-    const {message, notFound} = literals()
+    const {message, notFound, err4} = literals()
+
+    if (validate(name)) return print(err4, resultDiv)
 
     let posicio = findPosition(name)
 
@@ -106,7 +112,48 @@ function veureHotel(){
 
     console.log(hotelActual)
 
+}
+
+function modificarHotel(){
+
+    let {name, nRooms, nFloors, hotelArea, resultDiv} = catchValues()
+    const {message, mModifica, notFound,err4} = literals()
+
+    if (validate(name)) return print(err4, resultDiv)
 
 
+    let posicio = findPosition(name)
 
+    if (posicio == -1) return print(notFound, resultDiv)
+        
+    document.getElementById("updateButton").style.display = "block";
+        let hotelActual = hotels[posicio]
+
+    document.getElementById("nRooms").value = hotelActual.nRooms
+    document.getElementById("nFloors").value = hotelActual.nFloors
+    document.getElementById("hotelArea").value = hotelActual.hotelArea
+
+    print(mModifica, resultDiv)
+}
+
+function updateHotel(){
+
+    let {name, nRooms, nFloors, hotelArea, resultDiv} = catchValues()
+    const {message, mUpdate, notFound} = literals()
+
+
+    let posicio = findPosition(name)
+
+    if (posicio == -1) return print(notFound, resultDiv)
+
+    let hotelActual = hotels[posicio]
+
+    hotelActual.nRooms = nRooms
+    hotelActual.nFloors = nFloors
+    hotelActual.hotelArea = hotelArea
+
+    print(mUpdate, resultDiv)
+
+    console.log(hotels)
+    
 }
