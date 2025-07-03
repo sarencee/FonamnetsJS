@@ -21,22 +21,21 @@
         <input type="number" id="hotelArea" placeholder="500 m2">
         <br>
     </section>
-    <input type="button" onclick="crearHotel()" value="Crear hotel">
-    <input type="button" onclick="veureHotel()" value="Veure hotel">
-    <input type="button" onclick="donarDeBaixaHotel()" value="Eliminar hotel">
-
-    <section id="modify" style="display: none">
-
-        <input type="button" onclick="modificarHotel()" value="Modificar hotel">
-        <input type="button" onclick="updateHotel()" id="updateButton" value="Guardar cambios">
-
-    </section>
-
+    <br>
+    <input type="button" onclick="crearHotel()" style="display: block;" id="createButton" value="Crear hotel">
+    <input type="button" onclick="veureHotel()" style="display: block;" id="seeButton" value="Veure hotel">
+    <input type="button" onclick="donarDeBaixaHotel()" style="display: block;" id="eliminateButton" value="Eliminar hotel">
+    <input type="button" onclick="veureAll()" style="display: block;" id="eliminateButton" value="Veure tots els hotels">
+    
+    <input type="button" onclick="modificarHotel()" style="display: block;" id="modifyButton" value="Modificar hotel">
+    <input type="button" onclick="updateHotel()" style="display: none;" id="updateButton" value="Guardar cambios">
+    <br>
     <div id="result"></div>
 
     <script src="DDBB.js"></script>
     <script src="Hotel.js"></script>
     <script src="helpers.js"></script>
+    <script src="lang.js"></script>
     <script src="Faker.js"></script>
     <script src="main.js"></script>
 </body>

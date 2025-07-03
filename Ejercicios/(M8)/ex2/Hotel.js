@@ -6,22 +6,24 @@ class Hotel{
     #nRooms
     #nFloors
     #hotelArea
-    // #cost
+    #cost
 
     static roomPerWorker = 20
+    static salari = 1500
 
     constructor (name, nRooms, nFloors, hotelArea){
         this.#name = name
         this.#nRooms = nRooms
         this.#nFloors = nFloors
-        this.#hotelArea =hotelArea
+        this.#hotelArea = hotelArea
+        this.#cost = this.calcularManteniment()
     }
 
     get name () {return this.#name}
     get nRooms () {return this.#nRooms}
     get nFloors () {return this.#nFloors}
     get hotelArea () {return this.#hotelArea}
-    get cost () {return this.calcularManteniment()} //THIS is fine??
+    get cost () {return this.#cost} 
 
     set name (newValue) {this.#name = newValue}
     set nRooms (newValue) {this.#nRooms = newValue}
@@ -30,11 +32,10 @@ class Hotel{
 
     calcularManteniment(){
        
-        let cost = 0
         let workers =  Math.ceil (this.#nRooms / Hotel.roomPerWorker)
-        cost = workers * 1500
+        let costCalcul = workers * 1500
 
-        return cost
+        return costCalcul
 
     }
 
