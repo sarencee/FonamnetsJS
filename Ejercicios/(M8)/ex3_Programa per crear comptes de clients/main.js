@@ -10,7 +10,7 @@ function createClient(){
 
     clients.push(client)
 
-        console.log(clients)
+    console.log(clients)
 
 
 }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3>Calcular àrea figures geometriques</h3>
+    <h4>1. Quadrat</h4>
+    <h4>2. Triangle</h4>
+    <h4>3. Rectangle</h4>
+    <h4>4. Cercle</h4>
+
+    <select id="option">
+        <option value="1">Quadrat</option>
+        <option value="2">Triangle</option>
+        <option value="3">Rectangle</option>
+        <option value="4">Cercle</option>
+    </select>
+    
+    <button onclick="main()">Seleccionar</button>
+
+    <section id="section-quadrat" style="display: none;">
+        <label for="side1">Indica la mesura d'un costat</label>
+        <input type="number" id="side1">
+        <input type="button" value="Calcular" onclick="squareArea()">
+    </section>
+    <section id="section-triangle-rectangle" style="display: none;">
+        <label for="base">Indica la mesura de la base</label>
+        <input type="number" id="base">
+        <label for="heigth">Indica la mesura de l'alçada</label>
+        <input type="number" id="heigth">
+        <input type="button" value="Calcular" onclick="triangleRectangleArea()">
+    </section>
+    <section id="section-circle" style="display: none;">
+        <label for="radius">Indica la mesura del radio</label>
+        <input type="number" id="radius">
+        <input type="button" value="Calcular" onclick="circleArea()">
+
+    </section>
+
+
+    <div id="result"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>
