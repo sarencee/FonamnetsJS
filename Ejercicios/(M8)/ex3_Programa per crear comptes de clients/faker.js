@@ -14,3 +14,23 @@ function crearFakeClient(){
 }
 
 crearFakeClient()
+
+function crearFakeAccount(){
+
+    let name = "Acc1"
+
+    const acc1 = new Account(name)
+
+    
+    clients[0].addAccount(acc1)
+
+    console.log(clients)
+}
+
+crearFakeAccount()
+
+//DB -> posicio client -> array account -> posicio account -> metode addBalance
+
+clients[0].account[0].addBalance(15)
+
+console.log(clients[0].account)

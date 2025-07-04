@@ -14,7 +14,6 @@ const responses = {
     },
     errEmpyValues : {
         success: false,
-        code : 222,
         message : 'Empty values.'
     },
     errAlreadySaved: {
@@ -36,6 +35,11 @@ const responses = {
         success: true,
         code : 200,
         message : 'Restaurant Updated.'
+    },
+    messUpdateBalance : {
+        success: true,
+        code : 200,
+        message : `Balance Updated. Current balance: `
     },
  
 }

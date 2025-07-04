@@ -36,6 +36,5 @@ function eliminateClient(){
 
     print( responses.messDelete.message, resultDiv)
 
-
-
 }
+
