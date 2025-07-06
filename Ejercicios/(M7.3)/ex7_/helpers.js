@@ -7,14 +7,15 @@ const validate = value => !value
 const valNum = num => isNaN(num) // true
 const valString = str => !isNaN(str) // true
 
-function catchValuesClient(){
+function catchValues(){
 
    return{
-    dni : document.getElementById("dni").value,  
-   //  dniAccount : document.getElementById("dniAccount").value,  
-    firstName : document.getElementById("firstName").value,   
-    lastName : document.getElementById("lastName").value,   
-    resultDiv : document.getElementById("result"),
+    priceNoodles : parseFloat(document.getElementById("price-noodles").value).toFixed(2),  
+    priceSquid : parseFloat(document.getElementById("price-squid").value).toFixed(2),   
+    priceShrimp : (parseFloat(document.getElementById("price-shrimp").value)).toFixed(2),   
+    numberFriends : parseInt(document.getElementById("number-friends").value),   
+    resultDiv1 : document.getElementById("result1"),
+    resultDiv2 : document.getElementById("result2"),
    } 
 
 }
