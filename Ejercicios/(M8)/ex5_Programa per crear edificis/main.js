@@ -20,3 +20,11 @@ let name2 = "Hospital de Vilafranca", nFLoors2 = 2, area2 = 1950, patients = 26
 const hospital1 = new Hospital (name2, nFLoors2, area2, patients)
 console.log(hospital1)
 console.log(hospital1.toString())
+
+let name3 = "Cinema Montecarlo", nFLoors3 = 1, area3 = 3180 , capacity = 26
+
+const cinema1 = new Cinema (name3, nFLoors3, area3, capacity)
+console.log(cinema1)
+console.log(cinema1.toString())
+console.log(cinema1.screenMovie(10, 10))
+
