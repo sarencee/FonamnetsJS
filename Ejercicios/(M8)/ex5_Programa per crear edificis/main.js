@@ -14,3 +14,9 @@ const hotel1 = new Hotel(name1, nFloors1, area1)
 console.log(hotel1)
 console.log()
 console.log(hotel1.toString())
+
+let name2 = "Hospital de Vilafranca", nFLoors2 = 2, area2 = 1950, patients = 26
+
+const hospital1 = new Hospital (name2, nFLoors2, area2, patients)
+console.log(hospital1)
+console.log(hospital1.toString())
