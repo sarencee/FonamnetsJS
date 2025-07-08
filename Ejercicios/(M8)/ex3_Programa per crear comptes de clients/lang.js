@@ -18,7 +18,7 @@ const responses = {
     },
     errAlreadySaved: {
         success: false,
-        message: "Element already exist",
+        message: "Element already exist.",
         code: 409
     },
     messSave : {
@@ -40,6 +40,11 @@ const responses = {
         success: true,
         code : 200,
         message : `Balance Updated. Current balance: `
+    },
+    messAddAccount : {
+        success: true,
+        code : 200,
+        message : `Account added.`
     },
  
 }

@@ -25,17 +25,17 @@ class Client{
 
     addAccountClient(account){
 
-        this.#accounts.push(account)
+        this.accounts.push(account)
         return responses.messSave.message
     }
     
     toString(){
         
         return`
-        DNI : ${this.#dni}
-        First Name : ${this.#firstName}
-        Last name : ${this.#lastName}
-        Accounts : ${this.#accounts}
+        DNI : ${this.dni}
+        First Name : ${this.firstName}
+        Last name : ${this.lastName}
+        Accounts : ${this.accounts}
         `
     }
 }

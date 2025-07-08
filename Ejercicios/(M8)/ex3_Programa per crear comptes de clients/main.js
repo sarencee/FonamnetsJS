@@ -4,29 +4,22 @@ function createClient(){
 
     const {dni, firstName, lastName, resultDiv} = catchValuesClient()
 
-    // if (valNum(dniClient)) return print(responses.errBadRequest.message, resultDiv)
     if (!validateClient(dni, firstName, lastName, resultDiv)) return
-  
-    console.log(responses.errAlreadySaved.code)
 
     const client = new Client(dni, firstName,lastName)
-    // console.log(client)
-    clients.push(client)
-    console.log("Tipus de client guardat:", clients[clients.length - 1] instanceof Client)
 
-    // console.log(clients)
+    clients.push(client)
 
     print(responses.messSave.message,resultDiv)
 
-    console.log(responses.messSave.code)
     console.log(clients)
 
 }
 
 function eliminateClient(){
-    const {dni, firstName, lastName, resultDiv} = catchValuesClient()
+    const {dni, resultDiv} = catchValuesClient()
 
-    validateClient(dni, firstName, lastName, resultDiv)
+    if (validate(dni)) return print(responses.errEmpyValues.message, resultDiv)
 
     let position = findPositionClient(dni, clients)
 
@@ -45,25 +38,85 @@ function addAccount(){
     const {dni, resultDiv} = catchValuesClient()
     console.log(dni)
     const accName = document.getElementById("accountName").value
+    
+    if (!validateAcc(dni, accName, resultDiv)) return   
+
     const acc1 = new Account (accName)
+
+    let positionClient = findPositionClient(dni, clients)
+
+    if (positionClient == -1) return print(responses.errNotFound.message, resultDiv)
+
+    let clientActual = clients[positionClient]
+  
+    clientActual.addAccountClient(acc1)
+
+    print(responses.messAddAccount.message, resultDiv)
+
+}
+
+function addBalance(){
+
+    const {dni, accountName, amount, resultDiv} = catchValuesClient()
+
+    if (!validateAcc(dni, accountName, resultDiv)) return   
+
+    let positionClient = findPositionClient(dni, clients)
+
+    if (positionClient == -1) return print(responses.errNotFound.message, resultDiv)
+
+    let clientActual = clients[positionClient]
+
+    let arrAccClientActual = clientActual.accounts
+
+    let positionAcc = findPositionAccount(accountName, arrAccClientActual)
+
+    console.log(positionAcc)
+
+    if (positionAcc == -1) return print("Account not found.", resultDiv)
+
+    let accActual = arrAccClientActual[positionAcc]
+
+    if (validate(amount)) return print("Please, intoduce amount.", resultDiv)
+
+    accActual.addBalance(amount)
+
+    console.log(accActual)
+
+    print(`Amount added. Current balance: ${accActual.balance.toFixed(2)}€.`, resultDiv)
+
+}
+
+function withdrawBalance(){
+
+    const {dni, accountName, amount, resultDiv} = catchValuesClient()
+
+    if (!validateAcc(dni, accountName, resultDiv)) return   
+
+    let positionClient = findPositionClient(dni, clients)
+
+    if (positionClient == -1) return print(responses.errNotFound.message, resultDiv)
+
+    let clientActual = clients[positionClient]
+
+    let arrAccClientActual = clientActual.accounts
+
+    let positionAcc = findPositionAccount(accountName, arrAccClientActual)
+
+    console.log(positionAcc)
+
+    if (positionAcc == -1) return print("Account not found.", resultDiv)
+
+    let accActual = arrAccClientActual[positionAcc]
+
+    if (validate(amount)) return print("Please, intoduce amount.", resultDiv)
         
-    let position = findPositionClient(dni, clients)
+    if(accActual.balance < amount) return print("Insuficient funds.", resultDiv)
 
-    if (position == -1) return print(responses.errNotFound.message, resultDiv)
+    accActual.withdrawBalance(amount)
 
-    let clientActual = clients[position]
-    console.log(clientActual.toString())
+    console.log(accActual)
 
-    console.log(clientActual instanceof Client) // debe mostrar true
-
-    console.log(clientActual)
-    console.log(typeof clientActual.addAccountClient)
-    console.log("Té addAccountClient?", typeof clientActual.addAccountClient)
-  clientActual.addAccountClient(acc1)
-
-    console.log(clientActual.toString())
-
-
-
+    print(`Amount withdrawn. Current balance: ${accActual.balance.toFixed(2)}€.`, resultDiv)
 
 }

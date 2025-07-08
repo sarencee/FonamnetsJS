@@ -23,7 +23,7 @@ class Account{
 
     withdrawBalance(num){
 
-        if (this.#balance < num) return responses.errBadRequest.message
+        if (this.#balance < num) return false
         this.#balance -= num
         return this.#balance
     }

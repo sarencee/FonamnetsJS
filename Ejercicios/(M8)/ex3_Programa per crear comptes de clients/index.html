@@ -12,26 +12,39 @@
         
         <label for="dni">Introdueix el dni</label>
         <input type="text"  id="dni" placeholder="123">
-        <label for="firstName">Introdueix el firstName</label>
+        <br>
+        <label for="firstName">Introdueix el nom del client</label>
         <input type="text"  id="firstName" placeholder="Donkey">
-        <label for="lastName">Introdueix el lastName</label>
+        <br>
+        <label for="lastName">Introdueix el cognom del client</label>
         <input type="text"  id="lastName" placeholder="Kong">
-
+        <br>
+        <br>
         <button onclick="createClient()">Crear client</button>
         <button onclick="eliminateClient()">Eliminar client</button>
 
     </section>
-
-    <section id="crate-account">
-        
-        <!-- <label for="dniAccount">Introdueix el dni del client</label>
-        <input type="text"  id="dniAccount" placeholder="123"> -->
+    <br>    
+    <br>    
+    <section id="create-account">
+      
         <label for="accountName">Introdueix nom del compte</label>
         <input type="text"  id="accountName" placeholder="DNI-01">
-
+        <br>
+        <br>
         <button onclick="addAccount()">Crear compte</button>
-        <button onclick="addBalance()">Eliminar compte</button>
-        <button onclick="withdrawBalance()">Afegeix diners</button>
+  
+    </section>
+    <br>
+    <br>
+    <section id="modify-account">
+
+        <label for="amount">Quina quantitat?</label>
+        <input type="number" id="amount">
+        <br>
+        <br>
+        <button onclick="addBalance()">Afegeix diners</button>  
+        <button onclick="withdrawBalance()">Retirar diners</button>
 
     </section>
 
@@ -42,7 +55,7 @@
     <script src="Account.js"></script>
     <script src="lang.js"></script>
     <script src="helpers.js"></script>
-    <!-- <script src="faker.js"></script> -->
+    <script src="faker.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

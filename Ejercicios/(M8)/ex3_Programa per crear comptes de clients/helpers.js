@@ -3,7 +3,7 @@
 
 const print = (message, elementHTML) => elementHTML.innerHTML = message
 
-const validate = value => !value
+const validate = value => !value // if value == falsy returns true
 const valNum = num => isNaN(num) // true
 const valString = str => !isNaN(str) // true
 
@@ -11,9 +11,10 @@ function catchValuesClient(){
 
    return{
     dni : document.getElementById("dni").value,  
-   //  dniAccount : document.getElementById("dniAccount").value,  
+    accountName : document.getElementById("accountName").value,  
     firstName : document.getElementById("firstName").value,   
     lastName : document.getElementById("lastName").value,   
+    amount : parseFloat(document.getElementById("amount").value),   
     resultDiv : document.getElementById("result"),
    } 
 
@@ -40,6 +41,25 @@ function findPositionClient(dni, array){
    
 }
 
+function findPositionAccount(accName, arrayAcc){
+
+    let positionAcc = -1
+    let i = 0
+
+    if (arrayAcc.length < 1) return positionAcc
+
+    do{
+        if (arrayAcc[i].name == accName){
+            positionAcc = i
+        }
+
+        i++
+    } while (i < arrayAcc.length && position == -1)
+
+    return positionAcc
+   
+}
+
 function validateClient(dni, firstName, lastName, resultDiv){
 
    if (validate(dni) || validate(firstName) || validate(lastName)){
@@ -59,6 +79,24 @@ function validateClient(dni, firstName, lastName, resultDiv){
    if (position !== -1){
 
       print(responses.errAlreadySaved.message, resultDiv)
+      return false
+   }
+
+   return true
+}
+
+function validateAcc(dni, accountName, resultDiv){
+
+   if(validate(dni) || validate(accountName)){
+      print (responses.errEmpyValues.message, resultDiv)
+      return false
+   }
+
+   let position = findPositionClient(dni, clients)
+
+   if (position == -1){
+
+      print(responses.errNotFound.message, resultDiv)
       return false
    }
 
