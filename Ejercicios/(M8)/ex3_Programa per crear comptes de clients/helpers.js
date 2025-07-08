@@ -85,7 +85,9 @@ function validateClient(dni, firstName, lastName, resultDiv){
    return true
 }
 
-function validateAcc(dni, accountName, resultDiv){
+//Revise, find position is already validated in validateClient
+
+function validateAcc(dni, accountName, resultDiv){ 
 
    if(validate(dni) || validate(accountName)){
       print (responses.errEmpyValues.message, resultDiv)
