@@ -28,6 +28,7 @@ class Hospital extends Building{
         return `S’estan repartint ${daylyRations} racions.`
     }
     
+    
     toString(){
         return`
         ${super.toString()}

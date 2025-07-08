@@ -8,11 +8,11 @@ console.log(Edifici1)
 console.log(Edifici1.cleanBuilding())
 console.log(Edifici1.calculateSurveilanceCost(1000, true))
 
-let name1 = "Hotel Hilton", nFloors1 = 22, area1 = 73858 
-const hotel1 = new Hotel(name1, nFloors1, area1)
+let name1 = "Hotel Hilton", nFloors1 = 22, area1 = 73858, rooms1 = 583
+const hotel1 = new Hotel(name1, nFloors1, area1, rooms1)
 
 console.log(hotel1)
-console.log()
+console.log(hotel1.roomService())
 console.log(hotel1.toString())
 
 let name2 = "Hospital de Vilafranca", nFLoors2 = 2, area2 = 1950, patients = 26
