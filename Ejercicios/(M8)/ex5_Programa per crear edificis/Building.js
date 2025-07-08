@@ -48,7 +48,6 @@ class Building{
         Nom : ${this.name}
         Número de pisos: ${this.nFloors}
         Àrea: ${this.area}m2
-        Cost neteja: ${this.cleanBuilding().costMonth}€
-        `
+        Cost neteja: ${this.cleanBuilding().costMonth}€`
     }
 }

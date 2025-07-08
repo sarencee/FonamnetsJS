@@ -12,6 +12,7 @@ class Hotel extends Building{
     toString(){
         return `
         ${super.toString()}
+        Número de vigilants: ${super.calculateSurveilanceCost(Hotel.meterPerGuardHotel, true).guards}
         Cost vigilància: ${super.calculateSurveilanceCost(Hotel.meterPerGuardHotel, true).costSurveilanceMonth}€
         `
     }
