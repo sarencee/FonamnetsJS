@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+     <section id="astronautas">
+
+        <label for="dni">DNI Astronauta</label>
+        <input type="text" id="dni">
+        <label for="name">Nom Astronauta</label>
+        <input type="text" id="name">
+        <label for="age">Edat Astronauta</label>
+        <input type="number" id="age">
+        <label for="weight">Pes Astronauta</label>
+        <input type="number" id="weight">
+
+        <input type="button" onclick="createAstronaut()" value="createAstronaut()">
+        <input type="button" onclick="showAstronauts()" value="Mostrar Astronautes">
+        <label for="hability">Habilitat</label>
+        <input type="text" id="hability">
+        <input type="button" onclick="learnHabilities()" value="Aprendre Habilitats">
+        <input type="button" onclick="forgetHabilities()" value="Oblidar Habilitats">
+        <input type="button" onclick="showHabilities()" value="Mostrar Habilitats">
+    </section>
+
+    <section id="misions">
+
+         <label for="id">ID missió</label>
+        <input type="number" id="id">
+        <label for="finished">Está acabada?</label>
+        <input type="checkbox" id="finished">
+        <label for="nameMission">Nom missió</label>
+        <input type="text" id="nameMission">
+        <label for="lvl">Nivell missió</label>
+        <input type="number" id="lvl">
+
+        <input type="button" onclick="createMision()" value="Crear misió">
+        <input type="button" onclick="asignAstronaut()" value="Asignar astronauta">
+
+
+    </section>
+
+    <div id="result"></div>
+
+    <script src="DDBB.js"></script>
+    <script src="Mision.js"></script>
+    <script src="Staff.js"></script>
+    <script src="Astronaut.js"></script>
+    <script src="Scientist.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

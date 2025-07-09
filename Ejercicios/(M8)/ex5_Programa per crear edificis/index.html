@@ -6,7 +6,48 @@
     <title>Document</title>
 </head>
 <body>
-    
+
+    <section id="selecció" style.display='block'>
+        <h3>Que vols fer?</h3>
+        <input type="button" onclick="showHospitalSection()" value="Hospitals">
+        <input type="button" onclick="showCinemaSection()" value="Cinema">
+        <input type="button" onclick="showHotelSection()" value="Hotels">
+    </section>
+
+    <section id="hospitals" style.display='none'>
+
+        <label for="hospitalName">Hospital name</label>
+        <input type="text" id="hospitalName">
+        <br>
+        <label for="hospitalFloors">Number of floors</label>
+        <input type="number" id="hospitalFloors">
+        <br>
+        <label for="hospitalArea">Hospital area (m2)</label>
+        <input type="number" id="hospitalArea">
+        <br>
+        <label for="hospitalPatients">Hospital patients</label>
+        <input type="number" id="hospitalPatients">
+
+        <br>
+
+        <input type="button" onclick="createHospital()" value="Crear hospital">
+        <input type="button" onclick="seeHospital()" value="Veure hospital">
+        
+    </section>
+
+    <section id="cinemas" style.display='none'>
+        <label for="cinemaName">Cinema name</label>
+        <input type="text" id="hospitalName">
+    </section>
+
+    <section id="hotels" style.display='none'>
+        <label for="hotelName">Hotel name</label>
+        <input type="text" id="cinemaName">
+    </section>
+
+    <div id="result"></div>
+
+    <script src="DDBB.js"></script>
     <script src="Building.js"></script>
     <script src="Cinema.js"></script>
     <script src="Hospital.js"></script>
